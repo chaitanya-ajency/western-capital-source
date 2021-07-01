@@ -83,7 +83,7 @@
   
         $('.meet-team').slick({
             slidesToShow: 4,
-            slidesToScroll: 4,
+            slidesToScroll: 1,
             dots: true,
             arrows: false,
             autoplay: false,
@@ -126,13 +126,15 @@
         });
    
   
-        $(document).ready(function() {
+          $(document).ready(function() {
             $(".navbar-toggler").click(function() {
                 $('.navbar').toggleClass("bg-white");
                 $('.header-1 .scrolltop').toggleClass("d-none");
                 $('.header-1 .scrolldown').toggleClass("d-block");
                 $('.fa-bars').toggleClass("text-dark");
-                $('.navbar-toggler').toggleClass("filter-invert");
+                $('.blue').toggleClass("d-none");
+                $('.white').toggleClass("d-none");
+
             });
         });
         $(document).ready(function() {
@@ -204,7 +206,7 @@
                         success: function (response) {
                             response = JSON.parse(response)
                             if(response.success == true){
-                              $('.success-message').text('You have successfully submitted the form').removeClass('d-none');
+                              $('.success-message').text('We have received your response and will get back to you shortly.').removeClass('d-none');
                               $(".input-txt").val('')
                             }
                             

@@ -602,7 +602,7 @@ section {
   @media screen and (min-width: 992px) {
     .Why-choose-WesternCapital {
       padding-top: 129px;
-      padding-bottom: 140px; } }
+      padding-bottom: 60px; } }
   .Why-choose-WesternCapital .title {
     margin-bottom: 35px; }
     @media screen and (min-width: 992px) {
@@ -896,7 +896,7 @@ footer {
   @media screen and (min-width: 992px) {
     .tabs-section {
       margin-top: 80px;
-      padding-bottom: 120px; }
+      padding-bottom: 30px; }
       .tabs-section::after {
         content: ""; } }
   .tabs-section::before {
@@ -1050,7 +1050,10 @@ footer {
 
 @media screen and (min-width: 992px) {
   .meet-team .slick-dots {
-    bottom: -100px; } }
+    bottom: -85px;
+    position: absolute;
+    left: 0;
+    right: 0; } }
 
 .meet-team img {
   height: 421px;
@@ -1081,7 +1084,7 @@ footer {
   /* let the content decide it */ }
   @media screen and (min-width: 768px) {
     .tab-content > .active {
-      padding-bottom: 50px; } }
+      padding-bottom: 120px; } }
 /* bootstrap hack end */
 .services {
   background-image: url(../img/Subtract.png); }
@@ -2319,6 +2322,10 @@ img.contact-page-bg-pattern {
 .text-red {
   color: red; }
 
+@media screen and (max-width: 992px) {
+  .bg-light-blue {
+    background-color: #dfefff; } }
+
 .slideshow {
   position: relative;
   width: 100%;
@@ -2362,7 +2369,7 @@ img.contact-page-bg-pattern {
       height: 100%;
       width: 100%;
       top: 0;
-      background-image: url(../images/overlay.png);
+      background-image: url(../img/overlay.png);
       background-size: cover;
       z-index: 1; }
     .slideshow .slide.is-active {

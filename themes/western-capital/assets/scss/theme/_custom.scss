@@ -827,7 +827,7 @@ section {
 
     @media screen and (min-width: 992px) {
         padding-top: 129px;
-        padding-bottom: 140px;
+        padding-bottom: 60px;
     }
     .title {
         margin-bottom: 35px;
@@ -1187,7 +1187,7 @@ footer {
     overflow-x: hidden;
     @media screen and (min-width: 992px) {
         margin-top: 80px;
-        padding-bottom: 120px;
+        padding-bottom: 30px;
         &::after {
             content: "";
         }
@@ -1391,7 +1391,10 @@ footer {
     }
     @media screen and (min-width: 992px) {
         .slick-dots {
-            bottom: -100px;
+            bottom: -85px;
+            position: absolute;
+            left: 0;
+            right: 0;
         }
     }
 
@@ -1421,7 +1424,7 @@ footer {
 .tab-content > .active {
     height: auto; /* let the content decide it */
     @media screen and (min-width: 768px) {
-        padding-bottom: 50px;
+        padding-bottom: 120px;
     }
 } /* bootstrap hack end */
 .services {
@@ -3019,4 +3022,9 @@ img.contact-page-bg-pattern {
 }
 .text-red{
     color: red;
+}
+.bg-light-blue{
+    @media screen and (max-width: 992px) {
+        background-color: #dfefff;
+    }
 }

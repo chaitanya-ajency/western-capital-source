@@ -1,8 +1,8 @@
-
-
 <nav class="navbar navbar-expand-lg  header-1">
     <div class="container justify-content-start justify-content-md-between">
-        <img alt="" src="{{"img/bars.png" | absURL}}" class="navbar-toggler bg-transparent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse">
+        <img alt="" src="{{"img/bars-invert.png" | absURL}}" class="navbar-toggler bg-transparent d-none blue" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse">
+        <img alt="" src="{{"img/bars.png" | absURL}}" class="navbar-toggler bg-transparent white" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse">
+
         <a class="navbar-brand scrolltop" href="{{ .Site.BaseURL }}"><img alt="" src="{{"img/LOGO1.png" | absURL}}" class="logo"></a>
         <a class="navbar-brand scrolldown" href="{{ .Site.BaseURL }}"><img alt="" src="{{"img/onscroll.png" | absURL}}" class="logo"></a>
 
@@ -10,22 +10,22 @@
         <div class="collapse navbar-collapse justify-content-md-end" id="navbarSupportedContent">
             <ul class="navbar-nav text-capitalize mb-2 mb-lg-0">
                 <li class="nav-item ">
-                    <a aria-current="page" class="nav-link {{ .Params.homeactiveclass }}" href="{{ .Site.BaseURL }}">Home</a>
+                    <a aria-current="page" class="nav-link " href="{{ .Site.BaseURL }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ .Params.aboutactiveclass }}" href="{{ .Site.BaseURL }}/pages/aboutus/">about us</a>
+                    <a class="nav-link active" href="{{ .Site.BaseURL }}aboutus">about us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="#">services</a>
+                    <a class="nav-link " href="#services">services</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a aria-expanded="false" class="nav-link  dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button" disabled>company</a>
                     <ul aria-labelledby="navbarDropdown" class="dropdown-menu px-2">
                         <li class="">
-                            <a class="dropdown-item" href="{{ .Site.BaseURL }}pages/advisors">our advisors</a>
+                            <a class="dropdown-item" href="{{ .Site.BaseURL }}advisors">our advisors</a>
                         </li>
                         <li class="">
-                            <a class="dropdown-item" href="{{ .Site.BaseURL }}pages/promoters">our promoters</a>
+                            <a class="dropdown-item" href="{{ .Site.BaseURL }}promoters">our promoters</a>
                         </li>
                     </ul>
                 </li>
