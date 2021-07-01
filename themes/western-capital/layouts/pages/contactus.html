@@ -66,20 +66,24 @@
             <div class="col-md-10 col-lg-6">
                 <form id="contact" method="post">
                     <fieldset>
-                        <label>Full name</label>
+                        <label>Full name <span class="text-orange">*</span></label>
                         <input placeholder="" type="text">
+                        <span class="text-danger d-none">Please fill out this field.</span>
                     </fieldset>
                     <fieldset>
                         <label>Phone Number <span class="text-orange">*</span></label>
                         <input placeholder="" type="tel">
+                        <span class="text-danger d-none">Please fill out this field.</span>
                     </fieldset>
                     <fieldset>
                         <label>Email id <span class="text-orange">*</span></label>
                         <input placeholder="" type="email">
+                        <span class="text-danger d-none">Please fill out this field.</span>
                     </fieldset>
                     <fieldset>
                         <label>message <span class="text-orange">*</span></label>
                         <textarea placeholder=""></textarea>
+                        <span class="text-danger d-none">Please fill out this field.</span>
                     </fieldset>
                     <fieldset class="mb-0">
                         <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
