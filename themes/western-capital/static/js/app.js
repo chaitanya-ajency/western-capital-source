@@ -107,12 +107,6 @@
         AOS.init();
    
   
-        jQuery(document).ready(function($) {
-            $('.counter').counterUp({
-                delay: 5,
-                time: 1000
-            });
-        });
    
    
   
@@ -160,3 +154,90 @@
                 $('.fade-out').removeClass('animate__animated').fadeOut().fadeIn();
             });
         });
+
+        $(document).ready(function() {
+            $(document).on("click","#contact-submit",function(e){
+
+                let full_name = $("#full_name").val();
+                let phone = $("#phone").val();
+                let email = $("#email").val();
+                let message = $("#message").val();
+                
+                $('.input-txt').removeClass('text-error')
+                let error = 0
+                if(validateInput(full_name) != ""){
+                    $("#full_name").addClass('text-error')
+                    error++;
+                }
+
+                if(validateInput(phone) != ""){
+                    $("#phone").addClass('text-error')
+                    error++;
+                }
+
+                if(validateEmail(email) != ""){
+                    $("#email").addClass('text-error')
+                    error++;
+                }
+
+                if(validateInput(message) != ""){
+                    $("#message").addClass('text-error')
+                    error++;
+                }
+
+                if(error == 0){
+                    let requestValues = {
+                        'full_name':full_name,
+                        'phone':phone,
+                        'email':email,
+                        'message':message 
+                    }
+
+                    $.ajax({
+                        url: "/send-contact-mail.php",
+                        type: "post",
+                        data: requestValues ,
+                        success: function (response) {
+                            response = JSON.parse(response)
+                            if(response.success == true){
+                                alert("success")
+                            }
+                            
+                           // You will get response from your PHP page (what you echo or print)
+                        },
+                        error: function(jqXHR, textStatus, errorThrown) {
+                           console.log(textStatus, errorThrown);
+                        }
+                    });
+                }
+            });
+        });
+
+        function validateInput(textInput){
+            let errors = '';
+            if(textInput === undefined){
+                errors= 'Please enter required value'
+            }
+            else if(textInput !== undefined && (textInput).trim().replace(/ /g, "") ==""){
+                errors= 'Please enter required value'
+            }
+            return errors;
+
+        }
+
+    function validateEmail(accountEmail){
+        let errors = '';
+        let reg = /(?!.*\.{2})^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([\t]*\r\n)?[\t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([\t]*\r\n)?[\t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i
+        
+        if(accountEmail === undefined){
+            errors= 'Please enter required value'
+        }
+        else if(accountEmail !== undefined && (accountEmail).trim().replace(/ /g, "") ==""){
+            errors= 'Please enter required value'
+        }
+        else if(accountEmail !== undefined && !reg.test(accountEmail)){
+            errors= 'Please enter valid email'
+        }
+
+        return errors;
+    }
