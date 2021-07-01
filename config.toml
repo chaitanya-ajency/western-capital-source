@@ -1,0 +1,23 @@
+baseURL = "https://chaitanya-ajency.github.io/western-capital-live/"
+languageCode = "en-us"
+title = "western-capital signup"
+theme = "western-capital"
+publishDir = "docs"
+
+
+
+
+[[menu.primary]]
+    name = "Home"
+    url = "/"
+    weight = 1
+[[menu.primary]]
+    name = "About Us"
+    url = "/pages/aboutus/"
+    weight = 2
+[[menu.primary]]
+    name = "services"
+    url = "#services"
+    weight = 3
+
+   
