@@ -2082,7 +2082,7 @@ footer {
         line-height: initial;
     }
 }
-#contact {
+.contact {
     background: #fff;
     margin: auto;
     input {
@@ -2118,7 +2118,7 @@ footer {
             border: 1px solid #aaa;
         }
     }
-    button[type="submit"] {
+    #contact-submit {
         cursor: pointer;
         border: none;
         background: #02478c;
@@ -2158,7 +2158,7 @@ img.contact-page-bg-pattern {
     z-index: 0;
 }
 @media screen and (min-width: 992px) {
-    #contact {
+    .contact {
         label {
             font-size: 18px;
             letter-spacing: 0.15em;
@@ -3013,4 +3013,7 @@ img.contact-page-bg-pattern {
             }
         }
     }
+}
+.text-error {
+    border: 1px solid red !important;
 }

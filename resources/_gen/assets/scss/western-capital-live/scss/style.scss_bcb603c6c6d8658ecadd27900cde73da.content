@@ -1596,22 +1596,22 @@ footer {
 .contact-form .subtitle {
   line-height: initial; }
 
-#contact {
+.contact {
   background: #fff;
   margin: auto; }
-  #contact input {
+  .contact input {
     width: 100%;
     border: 1px solid #ccc;
     background: #fff;
     margin: 0 0 5px;
     padding: 10px; }
-    #contact input:hover {
+    .contact input:hover {
       transition: border-color 0.3s ease-in-out;
       border: 1px solid #aaa; }
-    #contact input:focus {
+    .contact input:focus {
       outline: 0;
       border: 1px solid #aaa; }
-  #contact textarea {
+  .contact textarea {
     width: 100%;
     border: 1px solid #ccc;
     background: #fff;
@@ -1620,13 +1620,13 @@ footer {
     height: 200px;
     max-width: 100%;
     resize: none; }
-    #contact textarea:hover {
+    .contact textarea:hover {
       transition: border-color 0.3s ease-in-out;
       border: 1px solid #aaa; }
-    #contact textarea:focus {
+    .contact textarea:focus {
       outline: 0;
       border: 1px solid #aaa; }
-  #contact button[type="submit"] {
+  .contact #contact-submit {
     cursor: pointer;
     border: none;
     background: #02478c;
@@ -1635,10 +1635,10 @@ footer {
     padding: 10px 15px;
     font-size: 15px;
     border-radius: 5px; }
-    #contact button[type="submit"]:hover {
+    .contact #contact-submit:hover {
       background: #0f5dac;
       transition: background-color 0.3s ease-in-out; }
-  #contact label {
+  .contact label {
     font-weight: bold;
     line-height: 27px;
     text-transform: uppercase;
@@ -1660,7 +1660,7 @@ img.contact-page-bg-pattern {
   z-index: 0; }
 
 @media screen and (min-width: 992px) {
-  #contact label {
+  .contact label {
     font-size: 18px;
     letter-spacing: 0.15em; } }
 
@@ -2312,6 +2312,9 @@ img.contact-page-bg-pattern {
     .slick-dots li.slick-active::before button::before {
       opacity: 0;
       display: none; }
+
+.text-error {
+  border: 1px solid red !important; }
 
 .slideshow {
   position: relative;
