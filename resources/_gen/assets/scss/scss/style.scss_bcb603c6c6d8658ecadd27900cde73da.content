@@ -2313,6 +2313,12 @@ img.contact-page-bg-pattern {
       opacity: 0;
       display: none; }
 
+.text-error {
+  border: 1px solid red !important; }
+
+.text-red {
+  color: red; }
+
 .slideshow {
   position: relative;
   width: 100%;

@@ -68,18 +68,25 @@
                     <fieldset>
                         <label>Full name</label>
                         <input placeholder="" type="text" name="full_name" id="full_name" class="input-txt">
+                        <span class="input-error full-name-error text-red"></span>
                     </fieldset>
                     <fieldset>
                         <label>Phone Number <span class="text-orange">*</span></label>
                         <input placeholder="" type="tel" name="phone" id="phone" class="input-txt">
+                        <span class="input-error phone-error text-red"></span>
+
                     </fieldset>
                     <fieldset>
                         <label>Email id <span class="text-orange">*</span></label>
                         <input placeholder="" type="email" name="email" id="email" class="input-txt">
+                        <span class="input-error email-error text-red"></span>
+
                     </fieldset>
                     <fieldset>
                         <label>message <span class="text-orange">*</span></label>
                         <textarea placeholder="" name="message" id="message" class="input-txt"></textarea>
+                        <span class="input-error message-error text-red"></span>
+
                     </fieldset>
                     <fieldset class="mb-0">
                         <button name="submit" type="button" id="contact-submit" data-submit="...Sending">Submit</button>

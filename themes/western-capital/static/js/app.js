@@ -162,29 +162,33 @@
                 let phone = $("#phone").val();
                 let email = $("#email").val();
                 let message = $("#message").val();
-                
                 $('.input-txt').removeClass('text-error')
+                $('.input-error').text('')
                 let error = 0
-                if(validateInput(full_name) != ""){
+                let fullNameError = validateInput(full_name)
+                if(fullNameError != ""){
                     $("#full_name").addClass('text-error')
+                    $('.full-name-error').text(fullNameError)
                     error++;
                 }
-
-                if(validateInput(phone) != ""){
+                let phoneError = validateInput(phone)
+                if(phoneError != ""){
                     $("#phone").addClass('text-error')
+                    $('.phone-error').text(phoneError)
                     error++;
                 }
-
-                if(validateEmail(email) != ""){
+                let emailError = validateEmail(email)
+                if(emailError != ""){
                     $("#email").addClass('text-error')
+                    $('.email-error').text(emailError)
                     error++;
                 }
-
-                if(validateInput(message) != ""){
+                let msgError = validateInput(message)
+                if(msgError != ""){
                     $("#message").addClass('text-error')
+                    $('.message-error').text(msgError)
                     error++;
                 }
-
                 if(error == 0){
                     let requestValues = {
                         'full_name':full_name,
@@ -201,6 +205,7 @@
                             response = JSON.parse(response)
                             if(response.success == true){
                               $('.success-message').text('You have successfully submitted the form').removeClass('d-none');
+                              $(".input-txt").val('')
                             }
                             
                            // You will get response from your PHP page (what you echo or print)
