@@ -151,4 +151,12 @@
             });
         });
    
-        
+        $(document).ready(function() {
+            
+            $(".carousel-control-next").click(function() {
+                $('.fadeInRight').fadeIn().fadeOut().fadeIn();
+            });
+            $(".carousel-control-prev").click(function() {
+                $('.fade-out').removeClass('animate__animated').fadeOut().fadeIn();
+            });
+        });
