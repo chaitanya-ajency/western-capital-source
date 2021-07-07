@@ -8,10 +8,10 @@
                     <a aria-current="page" class="nav-link " href="{{ .Site.BaseURL }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="{{ .Site.BaseURL }}aboutus">about us</a>
+                    <a class="nav-link " href="{{ .Site.BaseURL }}aboutus">about us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="#services">services</a>
+                    <a class="nav-link " href="{{ .Site.BaseURL }}#services">services</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a aria-expanded="false" class="nav-link  dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button" disabled>company</a>
@@ -24,9 +24,9 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item mt-2 mt-lg-0 me-0">
+                <!-- <li class="nav-item mt-2 mt-lg-0 me-0">
                     <a class="nav-link login-btn" href="#">login</a>
-                </li>
+                </li> -->
                 
             </ul>
         </div>

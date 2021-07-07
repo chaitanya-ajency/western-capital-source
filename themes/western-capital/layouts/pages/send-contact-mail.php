@@ -1,7 +1,7 @@
 <?php
 try {
     // multiple recipients (note the commas)
-    $to = "chaitanya@ajency.in";
+    $to = "contact@westerncap.in";
 
     // subject
     $subject = "Contact form submitted on Westerncap.in";
@@ -18,7 +18,6 @@ try {
       <head>
       </head>
       <body>
-        <h1>Contact Us</h1>
         <p><b>FULL NAME :</b> ".$full_name." </p>
         <p><b>PHONE NUMBER :</b> ".$phone."</p>
         <p><b>EMAIL ID :</b> ".$email."</p>
